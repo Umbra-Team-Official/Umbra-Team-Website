@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Umbra Team</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <canvas id="rain-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header" id="site-header">
+    <a href="#title" class="site-header__logo" aria-label="Umbra Team — на главную">
+      <img src="assets/logo-icon.png" alt="" width="36" height="36">
+    </a>
+    <nav class="site-header__nav" aria-label="Основная навигация">
+      <a href="#title" class="site-header__link">Title</a>
+      <a href="#projects" class="site-header__link">Projects</a>
+      <a href="#contact" class="site-header__link">Contact us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section section--title" id="title">
+      <div class="section--title__bg" aria-hidden="true">
+        <img src="assets/logo-umbrella.png" alt="" class="title-umbrella-logo" data-rain-collision
+          data-rain-collision-bottom="0.47" width="1000" height="1000">
+      </div>
+      <div class="section--title__content">
+        <h1 class="studio-name">Umbra Team</h1>
+        <p class="studio-tagline">We make the experience</p>
+      </div>
+    </section>
+
+    <section class="section section--projects" id="projects">
+      <h2 class="section-heading">Projects</h2>
+
+      <article class="project project--screens-left">
+        <div class="project__gallery" data-carousel>
+          <div class="project__gallery-track">
+            <img src="assets/projects/Novis/Novis_1.png" alt="Novis_1" class="project__screenshot">
+            <img src="assets/projects/Novis/Novis_2.png" alt="Novis_2" class="project__screenshot">
+            <img src="assets/projects/Novis/Novis_3.png" alt="Novis_3" class="project__screenshot">
+          </div>
+          <button type="button" class="project__gallery-btn project__gallery-btn--prev" data-carousel-prev
+            aria-label="Предыдущий скриншот">‹</button>
+          <button type="button" class="project__gallery-btn project__gallery-btn--next" data-carousel-next
+            aria-label="Следующий скриншот">›</button>
+          <div class="project__gallery-dots" data-carousel-dots></div>
+        </div>
+        <div class="project__info">
+          <h3 class="project__name">Novis</h3>
+          <p class="project__description">
+
+          </p>
+          <div class="project__links">
+            <a href="#" class="project__link-btn">Steam</a>
+            <a href="#" class="project__link-btn">Itch.io</a>
+            <a href="#" class="project__link-btn">Discord</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 
+      <article class="project project--screens-right">
+        <div class="project__gallery" data-carousel>
+          <div class="project__gallery-track">
+            <img src="assets/projects/project-2-1.png" alt="Скриншот проекта 2" class="project__screenshot">
+            <img src="assets/projects/project-2-2.png" alt="Скриншот проекта 2" class="project__screenshot">
+          </div>
+          <button type="button" class="project__gallery-btn project__gallery-btn--prev" data-carousel-prev aria-label="Предыдущий скриншот">‹</button>
+          <button type="button" class="project__gallery-btn project__gallery-btn--next" data-carousel-next aria-label="Следующий скриншот">›</button>
+          <div class="project__gallery-dots" data-carousel-dots></div>
+        </div>
+        <div class="project__info">
+          <h3 class="project__name">Project Beta</h3>
+          <p class="project__description">
+
+          </p>
+          <div class="project__links">
+            <a href="#" class="project__link-btn">Itch.io</a>
+            <a href="#" class="project__link-btn">Discord</a>
+          </div>
+        </div>
+      </article>
+    -->
+
+    </section>
+
+    <section class="section section--contact" id="contact">
+      <h2 class="section-heading">Contact us</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3 class="contact-card__label">Email</h3>
+          <p class="contact-card__value"><a href="mailto:hello@umbrateam.example">hello@umbrateam.example</a></p>
+        </div>
+        <div class="contact-card">
+          <h3 class="contact-card__label">Discord</h3>
+          <p class="contact-card__value"><a href="#">Umbra Team Server</a></p>
+        </div>
+        <div class="contact-card">
+          <h3 class="contact-card__label">Social</h3>
+          <p class="contact-card__value"><a href="#">@UmbraTeam</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="site-footer__copy">&copy; <span id="year"></span> Umbra Team. All rights reserved.</p>
+  </footer>
+
+  <script src="js/carousel.js" defer></script>
+  <script src="js/rain.js" defer></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
